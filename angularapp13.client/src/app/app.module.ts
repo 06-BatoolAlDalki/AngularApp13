@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
+import { CategoryComponent } from './category/category.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({ //  Manager
   declarations: [
@@ -17,7 +19,9 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     SignInComponent,
     SignUpComponent,
-    HomeComponent // coach batool
+    HomeComponent,
+    CategoryComponent,
+    ProductComponent // coach batool
   ],
   imports: [
     BrowserModule, HttpClientModule,
