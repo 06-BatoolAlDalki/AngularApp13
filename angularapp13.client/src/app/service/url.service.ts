@@ -28,4 +28,9 @@ export class UrlService {
   getAllUsers() {
     return this._httptoqa.get<any>("https://67cea6ee125cd5af757b6514.mockapi.io/Users");
   }
+
+
+  addCategory(data :any) {
+    return this._httptoqa.post("https://67cd64b6dd7651e464ee3d63.mockapi.io/categories", data)
+  }
 }

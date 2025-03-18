@@ -14,6 +14,14 @@ import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
+import { StructrualComponent } from './structrual/structrual.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { GetCategoryComponent } from './Admin/get-category/get-category.component';
+import { GetProductComponent } from './Admin/get-product/get-product.component';
+import { AddCategoryComponent } from './Admin/add-category/add-category.component';
+import { AddProductComponent } from './Admin/add-product/add-product.component';
+import { DashBoardComponent } from './Admin/dash-board/dash-board.component';
 
 @NgModule({ //  Manager
   declarations: [
@@ -26,7 +34,15 @@ import { LoginComponent } from './login/login.component';
     CategoryComponent,
     ProductComponent,
     RegistrationComponent,
-    LoginComponent // coach batool
+    LoginComponent,
+    StructrualComponent,
+    ParentComponent,
+    ChildComponent,
+    GetCategoryComponent,
+    GetProductComponent,
+    AddCategoryComponent,
+    AddProductComponent,
+    DashBoardComponent // coach batool
   ],
   imports: [
     BrowserModule, HttpClientModule,
