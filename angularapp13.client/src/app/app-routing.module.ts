@@ -15,6 +15,7 @@ import { GetCategoryComponent } from './Admin/get-category/get-category.componen
 import { GetProductComponent } from './Admin/get-product/get-product.component';
 import { AddCategoryComponent } from './Admin/add-category/add-category.component';
 import { AddProductComponent } from './Admin/add-product/add-product.component';
+import { EditCategoryComponent } from './Admin/edit-category/edit-category.component';
 
 const routes: Routes = [
 
@@ -35,7 +36,8 @@ const routes: Routes = [
       { path: "getCategory", component: GetCategoryComponent },
       { path: "getProduct", component: GetProductComponent },
       { path: "addCategory", component: AddCategoryComponent },
-      {path : "addProduct" , component : AddProductComponent}
+      { path: "addProduct", component: AddProductComponent },
+      {path : "editCategory/:id" , component : EditCategoryComponent}
 
 
 
