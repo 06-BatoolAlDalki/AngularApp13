@@ -10,8 +10,18 @@ import { Router } from '@angular/router';
 export class RegistrationComponent {
 
 
-  ngOnInit() { }
 
+  conuty : string = ''
+  ngOnInit() {
+
+    this._url.userBehaviour.next(this.conuty)
+
+  }
+  sendData() {
+    debugger
+    this._url.userBehaviour.next(this.conuty)
+
+  }
   constructor(private _url : UrlService , private _route : Router) { }
 
 

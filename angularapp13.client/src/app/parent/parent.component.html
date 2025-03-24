@@ -1,6 +1,9 @@
 <p>parent works!</p>
 
 
+
+<h1> {{userData}}</h1>
 <app-child [user]="'sofyan'"></app-child>
 
 
+<app-child (event)="recieveData($event)"  *ngIf="value" ></app-child>

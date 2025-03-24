@@ -17,6 +17,7 @@
       <td>{{item.id}}</td>
       <td> <a routerLink="/dashBoard/editCategory/{{item.id}}">Edit category</a> </td>
       <td>   <a href="/product/{{item.id}}">go to product</a>  </td>
+      <td> <button (click)="SaveData(item.id)" > Save data</button></td>
     </tr>
    
   </tbody>

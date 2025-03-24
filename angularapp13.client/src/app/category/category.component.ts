@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UrlService } from '../service/url.service';
 import { TestSerService } from '../aymanService/test-ser.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-category',
@@ -10,7 +11,7 @@ import { TestSerService } from '../aymanService/test-ser.service';
 export class CategoryComponent {
 
 //1
-  constructor(private _ser : TestSerService) { }// inject to service in component 
+  constructor(private _ser : TestSerService, private _url : Router) { }// inject to service in component 
 
 
   //2
@@ -33,4 +34,12 @@ export class CategoryComponent {
 
   }
 
+
+  SaveData(id: any) {
+
+    debugger
+    alert(id)
+
+  //  this._url.navigate([`/home/${id}`])
+  }
 }

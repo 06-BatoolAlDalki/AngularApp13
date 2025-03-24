@@ -1,4 +1,11 @@
 <p>registration works!</p>
+
+
+<input type="text" [(ngModel)] ="conuty" />
+<button type="submit" (click)="sendData()"> submit</button>
+<br />
+<br />
+<hr />
 <form #register="ngForm" (ngSubmit)="postData(register.value)">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">name</label>

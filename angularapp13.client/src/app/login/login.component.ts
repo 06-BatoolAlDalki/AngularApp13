@@ -12,7 +12,17 @@ export class LoginComponent {
 
   constructor(private _url : UrlService, private _route : Router) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+    this._url.userObseravable.subscribe((data) => {
+
+
+      alert(data)
+    })
+
+
+
+  }
 
 
   usersData :any
@@ -20,7 +30,17 @@ export class LoginComponent {
     this._url.getAllUsers().subscribe((data) => {
       let user = data.find((p: any) => p.Email == enteredUser.Email && p.password == enteredUser.password);
 
-      if (user) {
+      if (enteredUser.Email == "Admin@gmail.com" && enteredUser.password == 123) {
+        this._url.userBehaviour.next("Admin@gmail.com")
+        localStorage.setItem("User", "Admin@gmail.com" )
+        alert("login successfully")
+        this._route.navigate(['/dashBoard'])
+      }
+      else if (user) {
+        this._url.userBehaviour.next(user.Email)
+        localStorage.setItem("User", user.Email)
+
+
         alert("login successfully")
         this._route.navigate(['/home'])
       } else {

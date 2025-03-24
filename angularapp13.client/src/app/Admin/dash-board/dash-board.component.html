@@ -1,5 +1,5 @@
 <!-- The sidebar -->
-<div class="sidebar">
+<div class="sidebar" *ngIf="container == 'Admin@gmail.com'">
   <a class="active" href="#home">Home</a>
   <a routerLink="/dashBoard/getCategory">get categories</a>
   <a routerLink="/dashBoard/getProduct">get Product</a>

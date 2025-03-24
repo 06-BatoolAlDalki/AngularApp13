@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 
 // inject to service anywhere 
@@ -10,6 +10,14 @@ import { Observable } from 'rxjs';
 export class UrlService {
 
   constructor(private _httptoqa: HttpClient) { }
+
+
+  userBehaviour = new BehaviorSubject<string>('hhhhh') // write to behiour subject
+  userObseravable = this.userBehaviour.asObservable();  // to read from behiour
+
+
+
+
 
 
   getCategory() {
